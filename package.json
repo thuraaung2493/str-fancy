@@ -1,0 +1,35 @@
+{
+  "name": "str-helpers",
+  "version": "1.0.0",
+  "description": "Helper functions for string.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thuraaung2493/str-helpers.git"
+  },
+  "keywords": [
+    "string",
+    "str",
+    "helpers",
+    "str-helpers",
+    "node",
+    "npm"
+  ],
+  "author": "thuraaung2493",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thuraaung2493/str-helpers/issues"
+  },
+  "homepage": "https://github.com/thuraaung2493/str-helpers#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.18",
+    "jest": "^26.6.3"
+  },
+  "dependencies": {
+    "any-ascii": "^0.1.7",
+    "pluralize": "^8.0.0"
+  }
+}
