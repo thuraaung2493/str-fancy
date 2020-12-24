@@ -1,8 +1,6 @@
-const StrFancy = require("./index");
-const strings = require("./strings");
+const { StrFancy, strings } = require("./index");
 
 let slice = "";
-let str = "App-Http-Controllers-Controller";
 
 slice = StrFancy.of("This is my name").explode(" ", 2);
 console.log(slice);
@@ -22,7 +20,7 @@ console.log(`containsAll: ${slice}`);
 slice = StrFancy.of(" foo_bar- baz  Vvs").studly();
 console.log(`studly: ${slice}`);
 
-slice = StrFancy.of(" foo_bar-baz  Vvs").camel();
+slice = StrFancy.of("foo_bar_baz").camel();
 console.log(`camel: ${slice}`);
 
 slice = StrFancy.of("I am a Thura Aung").after("am ").beforeLast("Aung");
@@ -82,11 +80,26 @@ console.log("plural: ", slice);
 slice = StrFancy.of("Aung").prepend("Mr. ", "Thura ");
 console.log("prepend: ", slice);
 
-slice = strings.replace("Laravel 6.x 6.x", "6.x", "7.x");
+slice = strings.replace(["", ""], ["7.x", "8.x"], "Laravel 6.x 7.c");
 console.log("replace: ", slice);
 
-slice = strings.replaceArray("The event will take place between ? and ?", "?", [
-  "8:30",
-  "9:00",
-]);
+slice = strings.replaceArray(
+  "?",
+  ["8:30", "9:00"],
+  "The event will take place between ? and ?"
+);
 console.log("replaceArray: ", slice);
+
+slice = strings.replaceFirst(
+  "the",
+  "a",
+  "the quick brown fox jumps over the lazy dog"
+);
+console.log("replaceFirst: ", slice);
+
+slice = strings.replaceLast(
+  "the",
+  "a",
+  "the quick brown fox jumps over the lazy dog"
+);
+console.log("replaceLast: ", slice);
