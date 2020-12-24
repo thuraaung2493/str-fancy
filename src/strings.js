@@ -359,50 +359,64 @@ function prepend(value, ...values) {
 }
 
 /**
- * Prepend the given values to the string.
+ * Replace the given value in the given string.
  *
+ * @param {String|String[]} search
+ * @param {String|String[]} replace
  * @param {String} value
- * @param {String[]} values
  * @returns {String}
  */
-function replace(value, search, replace) {
-  return value.replaceAll(search, replace);
+function replace(search, replace, value) {
+  return arrayWrap(search).reduce(
+    (v, s) => (s === "" ? v : v.replaceAll(s, arrayWrap(replace).shift())),
+    value
+  );
 }
 
 /**
- * Prepend the given values to the string.
+ * Replace a given value in the string sequentially with an array.
  *
- * @param {String} value
  * @param {String} search
  * @param {String[]} replaces
+ * @param {String} value
  * @returns {String}
  */
-function replaceArray(value, search, replaces) {
+function replaceArray(search, replaces, value) {
   return replaces.reduce((str, replace) => str.replace(search, replace), value);
 }
 
 /**
- * Prepend the given values to the string.
+ * Replace the first occurrence of a given value in the string.
  *
- * @param {String} value
  * @param {String} search
- * @param {String[]} replaces
+ * @param {String} replace
+ * @param {String} value
  * @returns {String}
  */
-function replaceFirst(value, search, replace) {
+function replaceFirst(search, replace, value) {
   return value.replace(search, replace);
 }
 
 /**
  * Prepend the given values to the string.
  *
- * @param {String} value
  * @param {String} search
  * @param {String[]} replaces
+ * @param {String} value
  * @returns {String}
  */
-function replaceLast(value, search, replace) {
-  return value.replace(search, replace);
+function replaceLast(search, replace, value) {
+  return reverseSentence(reverseSentence(value).replace(search, replace));
+}
+
+/**
+ * Convert the given value to reverse value.
+ *
+ * @param {String} value
+ * @returns {String} the quick brown => brown quick the
+ */
+function reverseSentence(value) {
+  return value.split(" ").reverse().join(" ");
 }
 
 /**
