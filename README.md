@@ -28,7 +28,7 @@
 ```javascript
 const { StrFancy, strings } = require("str-fancy");
 
-let str = StrFancy.of("foo_bar_baz").camel();
+let str = StrFancy.of("foo_bar_baz").camel().toString();
 console.log(str); // fooBarBaz
 
 str = strings.camel("foo_bar_baz");
