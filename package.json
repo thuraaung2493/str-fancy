@@ -1,14 +1,14 @@
 {
   "name": "str-helpers",
   "version": "1.0.0",
-  "description": "Helper functions for string.",
+  "description": "Laravel String Helper Functions For NodeJs",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "node examples.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thuraaung2493/str-helpers.git"
+    "url": "git+https://github.com/thuraaung2493/str-fancy.git"
   },
   "keywords": [
     "string",
@@ -21,9 +21,9 @@
   "author": "thuraaung2493",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/thuraaung2493/str-helpers/issues"
+    "url": "https://github.com/thuraaung2493/str-fancy.git/issues"
   },
-  "homepage": "https://github.com/thuraaung2493/str-helpers#readme",
+  "homepage": "https://github.com/thuraaung2493/str-fancy#readme",
   "devDependencies": {
     "@types/jest": "^26.0.18",
     "jest": "^26.6.3"
