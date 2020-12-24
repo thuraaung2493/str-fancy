@@ -3,7 +3,7 @@ const { StrFancy, strings } = require("./index");
 let slice = "";
 
 slice = StrFancy.of("This is my name").explode(" ", 2);
-console.log(slice);
+console.log("explode:", slice.toString());
 
 slice = StrFancy.of("This is my name.").endsWith(["name."]);
 console.log(`endsWith: ${slice}`);

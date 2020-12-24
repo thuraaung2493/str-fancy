@@ -365,4 +365,8 @@ class StrFancy {
   }
 }
 
+StrFancy.prototype.toString = function () {
+  return this.value;
+};
+
 module.exports = StrFancy;
